@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "841028351892",
+    "firebase_url": "https://my-i-pond-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "my-i-pond",
+    "storage_bucket": "my-i-pond.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841028351892:android:ed2dea1e7198876060c181",
+        "android_client_info": {
+          "package_name": "com.myipond.myipond"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841028351892-skm0t9e3cjmh46h02093dl0ufbul7gp0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWRctkN74RPZmAP4_y_KbqzaGEzt6oao0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841028351892-skm0t9e3cjmh46h02093dl0ufbul7gp0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
