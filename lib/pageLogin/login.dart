@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myipond/pageLogin/register.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'Widget/bezierContainer.dart';
+import 'package:myipond/halaman/halamanutama.dart';
 
 class login extends StatefulWidget {
   login({Key? key, this.title}) : super(key: key);
@@ -39,6 +40,10 @@ class _loginState extends State<login> {
 
   Widget _submitButton() {
     return Container(
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => halamanutama()));
+      },
       width: MediaQuery.of(context).size.width,
       padding: EdgeInsets.symmetric(vertical: 15),
       alignment: Alignment.center,
@@ -64,6 +69,10 @@ class _loginState extends State<login> {
 
   Widget _divider() {
     return Container(
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => halamanutama()));
+      },
       margin: EdgeInsets.symmetric(vertical: 10),
       child: Row(
         children: <Widget>[
@@ -96,6 +105,7 @@ class _loginState extends State<login> {
   }
 
   Widget _facebookButton() {
+    
     return Container(
       height: 50,
       margin: EdgeInsets.symmetric(vertical: 20),
