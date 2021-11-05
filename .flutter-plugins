@@ -5,3 +5,7 @@ firebase_analytics_web=/home/jisong710/snap/flutter/common/flutter/.pub-cache/ho
 firebase_auth=/home/jisong710/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.14.0+9/
 firebase_core=/home/jisong710/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/
 firebase_core_web=/home/jisong710/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.1.1+2/
+path_provider=/home/jisong710/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.6/
+path_provider_linux=/home/jisong710/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.0/
+path_provider_macos=/home/jisong710/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-2.0.2/
+path_provider_windows=/home/jisong710/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.3/
