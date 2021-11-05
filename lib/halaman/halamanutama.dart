@@ -123,19 +123,19 @@ class _halamanutamaState extends State<halamanutama> {
               width: 25,
             ),
             _roomLabel(
-              'Living Room',
+              'alat 1,
             ),
             SizedBox(
               width: 25,
             ),
             _roomLabel(
-              'Study Room',
+              'alat 2',
             ),
             SizedBox(
               width: 25,
             ),
             _roomLabel(
-              'Kitchin',
+              'alat 3',
             ),
             SizedBox(
               width: 25,
