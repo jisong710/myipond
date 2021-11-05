@@ -81,16 +81,14 @@ class _profilState extends State<StatefulWidget> {
               height: 30,
             ),
             Text(
-              'aji sasongko',
+              'my i-Pond',
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
             SizedBox(
               height: 70,
             ),
-            _placeContainer('Evelens Apartment', Color(0xff526fff), false),
-            _placeContainer('Parents House', Color(0xff8f48ff), false),
-            _placeContainer('Add another one', Color(0xffffffff), true),
+            text('saksake wae',),
           ],
         ),
       ),
