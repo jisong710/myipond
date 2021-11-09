@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
+import 'package:scoped_model/scoped_model.dart';
 
-class Appliance {
+class Appliance extends Model {
   String id;
   String title;
   String subtitle;

@@ -7,7 +7,7 @@ import '../data/appliance.dart';
 class halamanutama extends StatefulWidget {
   halamanutama(this.model);
 
-  final ApplianceModel model;
+  final Appliance model;
 
   _halamanutamaState createState() => _halamanutamaState();
 }
@@ -123,7 +123,7 @@ class _halamanutamaState extends State<halamanutama> {
               width: 25,
             ),
             _roomLabel(
-              'alat 1,
+              'alat 1',
             ),
             SizedBox(
               width: 25,
