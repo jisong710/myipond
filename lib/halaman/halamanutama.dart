@@ -1,13 +1,16 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:myipond/halaman/history.dart';
 import 'package:myipond/halaman/profil.dart';
 import '../data/datakolam.dart';
-import '../data/appliance.dart';
 
+// ignore: camel_case_types
 class halamanutama extends StatefulWidget {
   halamanutama(this.model);
 
-  final Appliance model;
+  final ApplianceModel model;
 
   _halamanutamaState createState() => _halamanutamaState();
 }
@@ -25,19 +28,19 @@ class _halamanutamaState extends State<halamanutama> {
             children: <Widget>[
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
+                children: const <Widget>[
                   Text(
-                    'July 11 2019',
+                    'My Ipond',
                     style: TextStyle(color: Colors.white),
                   ),
                   Text(
-                    'Hello DeathStroke!',
+                    'Hello Nadia',
                     style: TextStyle(color: Colors.white, fontSize: 30),
                   ),
                 ],
               ),
               GestureDetector(
-                child: CircleAvatar(
+                child: const CircleAvatar(
                   backgroundImage: NetworkImage(
                       'https://store.playstation.com/store/api/chihiro/00_09_000/container/US/en/999/UP1018-CUSA00133_00-AV00000000000015/1553561653000/image?w=256&h=256&bg_color=000000&opacity=100&_version=00_09_000'),
                 ),
@@ -55,16 +58,21 @@ class _halamanutamaState extends State<halamanutama> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                    border: Border.all(width: 1, color: Colors.white),
-                    borderRadius: BorderRadius.circular(25)),
-                child: Icon(
-                  Icons.power,
-                  color: Colors.white,
-                ),
-              ),
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                      border: Border.all(width: 1, color: Colors.white),
+                      borderRadius: BorderRadius.circular(25)),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => history()));
+                    },
+                    child: Icon(
+                      Icons.timelapse,
+                      color: Colors.white,
+                    ),
+                  )),
               SizedBox(
                 width: 20,
               ),
@@ -72,9 +80,9 @@ class _halamanutamaState extends State<halamanutama> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Row(
-                    children: <Widget>[
+                    children: const <Widget>[
                       Text(
-                        '7.9',
+                        'History',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,
@@ -83,17 +91,10 @@ class _halamanutamaState extends State<halamanutama> {
                       SizedBox(
                         width: 5,
                       ),
-                      Text(
-                        'kwh',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w900),
-                      ),
                     ],
                   ),
                   Text(
-                    'Power uses for today',
+                    'untuk semua kolam',
                     style: TextStyle(color: Colors.white54, fontSize: 18),
                   ),
                 ],
@@ -113,7 +114,7 @@ class _halamanutamaState extends State<halamanutama> {
         child: Row(
           children: <Widget>[
             Text(
-              'Bedroom',
+              'kolam 1',
               style: TextStyle(
                   color: Color(0xff4e80f3),
                   fontSize: 18,
@@ -128,18 +129,6 @@ class _halamanutamaState extends State<halamanutama> {
             SizedBox(
               width: 25,
             ),
-            _roomLabel(
-              'alat 2',
-            ),
-            SizedBox(
-              width: 25,
-            ),
-            _roomLabel(
-              'alat 3',
-            ),
-            SizedBox(
-              width: 25,
-            ),
           ],
         ),
       ),
@@ -148,7 +137,7 @@ class _halamanutamaState extends State<halamanutama> {
 
   Widget _roomLabel(String title) {
     return Text(
-      'Kitchin',
+      'kolam 2',
       style: TextStyle(
           color: Color(0xffb2b0b9), fontSize: 18, fontWeight: FontWeight.w600),
     );
@@ -156,13 +145,13 @@ class _halamanutamaState extends State<halamanutama> {
 
   Widget _buildApplianceCard(ApplianceModel model, int index) {
     return Container(
-      height: 220,
+      height: 15,
       padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-      margin: index % 2 == 0
-          ? EdgeInsets.fromLTRB(15, 7.5, 7.5, 7.5)
-          : EdgeInsets.fromLTRB(7.5, 7.5, 15, 7.5),
+      margin: index % 4 == 0
+          ? EdgeInsets.fromLTRB(15, 2.5, 7.5, 2.5)
+          : EdgeInsets.fromLTRB(7.5, 2.5, 15, 2.5),
       decoration: BoxDecoration(
-          boxShadow: <BoxShadow>[
+          boxShadow: const <BoxShadow>[
             BoxShadow(
                 blurRadius: 10, offset: Offset(0, 10), color: Color(0xfff1f0f2))
           ],
@@ -172,7 +161,7 @@ class _halamanutamaState extends State<halamanutama> {
               colors: model.allYatch[index].isEnable
                   ? [Color(0xff669df4), Color(0xff4e80f3)]
                   : [Colors.white, Colors.white]),
-          borderRadius: BorderRadius.circular(20)),
+          borderRadius: BorderRadius.circular(10)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -195,7 +184,8 @@ class _halamanutamaState extends State<halamanutama> {
             ],
           ),
           SizedBox(
-            height: 46,
+            height: 15,
+            width: 45,
           ),
           Text(
             model.allYatch[index].title,
@@ -224,23 +214,24 @@ class _halamanutamaState extends State<halamanutama> {
     return Container(
         alignment: Alignment.topCenter,
         // padding: EdgeInsets.symmetric(horizontal: 20, vertical: 0),
-        height: 487,
+        height: 250,
         child: GridView.count(
           // mainAxisSpacing: 10,
           // crossAxisSpacing: 10,
           crossAxisCount: 2,
           padding: EdgeInsets.all(0),
           children: List.generate(model.allYatch.length, (index) {
+            // ignore: unnecessary_null_comparison
             return model.allYatch[index].title != null
                 ? _buildApplianceCard(model, index)
                 : Container(
-                    height: 120,
-                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 50),
+                    height: 20,
+                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                     margin: index % 2 == 0
-                        ? EdgeInsets.fromLTRB(15, 7.5, 7.5, 7.5)
-                        : EdgeInsets.fromLTRB(7.5, 7.5, 15, 7.5),
+                        ? EdgeInsets.fromLTRB(15, 2.5, 7.5, 2.5)
+                        : EdgeInsets.fromLTRB(7.5, 2.5, 15, 2.5),
                     decoration: BoxDecoration(
-                        boxShadow: <BoxShadow>[
+                        boxShadow: const <BoxShadow>[
                           BoxShadow(
                               blurRadius: 10,
                               offset: Offset(0, 10),
@@ -267,7 +258,8 @@ class _halamanutamaState extends State<halamanutama> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: <Widget>[
+    return Scaffold(
+        body: Column(children: <Widget>[
       Container(
         height: 258,
         width: MediaQuery.of(context).size.width,
@@ -280,7 +272,7 @@ class _halamanutamaState extends State<halamanutama> {
             gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [Color(0xff669df4), Color(0xff4e80f3)]),
+                colors: const [Color(0xff669df4), Color(0xff4e80f3)]),
             borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(30),
                 bottomRight: Radius.circular(30))),
@@ -288,6 +280,6 @@ class _halamanutamaState extends State<halamanutama> {
       ),
       _roomCategories(),
       _applianceGrid(widget.model)
-    ]);
+    ]));
   }
 }

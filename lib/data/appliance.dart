@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
-import 'package:scoped_model/scoped_model.dart';
 
-class Appliance extends Model {
+// @dart=2.9
+class Appliance {
   String id;
   String title;
   String subtitle;
@@ -10,11 +10,11 @@ class Appliance extends Model {
   IconData bottomRightIcon;
   bool isEnable;
   Appliance(
-      {this.title,
-      this.subtitle,
-      this.leftIcon,
-      this.topRightIcon,
-      this.bottomRightIcon,
-      this.isEnable,
-      this.id});
+      {required this.title,
+      required this.subtitle,
+      required this.leftIcon,
+      required this.topRightIcon,
+      required this.bottomRightIcon,
+      required this.isEnable,
+      required this.id});
 }

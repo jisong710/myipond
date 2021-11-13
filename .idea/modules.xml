@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/myipond.iml" filepath="$PROJECT_DIR$/.idea/myipond.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myipond.iml" filepath="$PROJECT_DIR$/myipond.iml" />
     </modules>
   </component>
 </project>

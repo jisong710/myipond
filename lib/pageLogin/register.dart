@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:myipond/pageLogin/login.dart';
 import 'package:myipond/pageLogin/Widget/bezierContainer.dart';
@@ -72,11 +74,11 @@ class _registerState extends State<register> {
                 blurRadius: 5,
                 spreadRadius: 2)
           ],
-          gradient: LinearGradient(
+          gradient: const LinearGradient(
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
-              colors: [Color(0xfffbb448), Color(0xfff7892b)])),
-      child: Text(
+              colors: [Colors.lightBlue, Colors.lightBlueAccent])),
+      child: const Text(
         'Register Now',
         style: TextStyle(fontSize: 20, color: Colors.white),
       ),
@@ -90,12 +92,12 @@ class _registerState extends State<register> {
             context, MaterialPageRoute(builder: (context) => login()));
       },
       child: Container(
-        margin: EdgeInsets.symmetric(vertical: 20),
-        padding: EdgeInsets.all(15),
+        margin: const EdgeInsets.symmetric(vertical: 20),
+        padding: const EdgeInsets.all(15),
         alignment: Alignment.bottomCenter,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: const <Widget>[
             Text(
               'Already have an account ?',
               style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
@@ -119,19 +121,19 @@ class _registerState extends State<register> {
   Widget _title() {
     return RichText(
       textAlign: TextAlign.center,
-      text: TextSpan(
-          text: 'd',
+      text: const TextSpan(
+          text: 'My-',
           style: TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.w700,
               color: Color(0xffe46b10)),
           children: [
             TextSpan(
-              text: 'ev',
+              text: 'i',
               style: TextStyle(color: Colors.black, fontSize: 30),
             ),
             TextSpan(
-              text: 'rnz',
+              text: 'Pond',
               style: TextStyle(color: Color(0xffe46b10), fontSize: 30),
             ),
           ]),

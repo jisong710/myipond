@@ -88,7 +88,6 @@ class _profilState extends State<StatefulWidget> {
             SizedBox(
               height: 70,
             ),
-            text('saksake wae'),
           ],
         ),
       ),
